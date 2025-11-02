@@ -1,0 +1,60 @@
+﻿<Window x:Class="Assessment_Youssef_Elsayed.AddAppointment"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Assessment_Youssef_Elsayed"
+        mc:Ignorable="d"
+        Title="AddAppointment" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Top">
+                <TextBlock Text="Patient Id:   " FontSize="30" FontWeight="Bold"/>
+                <TextBox x:Name="PatientIdbox" Width="200"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Top">
+                <TextBlock Text="Doctor Id:   " FontSize="30" FontWeight="Bold"/>
+                <TextBox x:Name="DoctorIdbox" Width="200"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Top">
+                <TextBlock Text="Appointment Date:   " FontSize="20" FontWeight="Bold"/>
+                <TextBox x:Name="AppDatebox" Width="200"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Top">
+                <TextBlock Text="Appointment Day:   " FontSize="20" FontWeight="Bold"/>
+                <TextBox x:Name="AppDaybox" Width="200"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Top">
+                <TextBlock Text="Appointment Status:   " FontSize="20" FontWeight="Bold"/>
+                <TextBox x:Name="AppStatusbox" Width="183"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Vertical" VerticalAlignment="Top">
+                <TextBlock Text="Appointment Reason:" FontSize="20" FontWeight="Bold"/>
+                <TextBox x:Name="AppReasonbox" Width="395" HorizontalAlignment="Left" Height="40"/>
+            </StackPanel>
+        </Grid>
+        <Button Grid.Row="3" Background="Black" Foreground="White" Content="Add Appointment" FontSize="40" Click="Button_Click"></Button>
+    </Grid>
+</Window>

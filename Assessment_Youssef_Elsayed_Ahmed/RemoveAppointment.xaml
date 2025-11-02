@@ -1,0 +1,26 @@
+﻿<Window x:Class="Assessment_Youssef_Elsayed.RemoveAppointment"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Assessment_Youssef_Elsayed"
+        mc:Ignorable="d"
+        Title="RemoveAppointment" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Content="Remove Appointment" Foreground="White" Background="Black" FontSize="30" Click="Button_Click"/>
+        <DataGrid x:Name="AppointmentsDataGrid" AutoGenerateColumns="False" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Appointment Id" Binding="{Binding AppId}"/>
+                <DataGridTextColumn Header="Doctor Id" Binding="{Binding DoctorId}"/>
+                <DataGridTextColumn Header="Patient Id" Binding="{Binding PatientId}"/>
+                <DataGridTextColumn Header="Appointment Date" Binding="{Binding AppDateTime}"/>
+                <DataGridTextColumn Header="Appointment Day" Binding="{Binding AppDay}"/>
+                <DataGridTextColumn Header="Appointment Status" Binding="{Binding AppStatus}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
